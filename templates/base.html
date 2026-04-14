@@ -46,15 +46,15 @@
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>
             Dashboard
           </a>
-          <a href="{% url 'students:list' %}" class="nav-item {% block nav_students %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_students %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="5" r="3"/><path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
             Students
           </a>
-          <a href="{% url 'courses:list' %}" class="nav-item {% block nav_courses %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_courses %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h12M2 8h8M2 13h5"/></svg>
             Courses
           </a>
-          <a href="{% url 'attendance:list' %}" class="nav-item {% block nav_attendance %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_attendance %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 8l2 2 4-4"/></svg>
             Attendance
           </a>
@@ -62,11 +62,11 @@
 
         <div class="nav-section">
           <span class="nav-section-label">Academics</span>
-          <a href="{% url 'results:list' %}" class="nav-item {% block nav_results %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_results %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L10 6h5l-4 3 2 5L8 11l-5 4 2-5-4-3h5z"/></svg>
             Examinations
           </a>
-          <a href="{% url 'results:marks' %}" class="nav-item {% block nav_marks %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_marks %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="10" height="14" rx="1.5"/><path d="M6 5h4M6 8h4M6 11h2"/></svg>
             Results
           </a>
@@ -74,11 +74,11 @@
 
         <div class="nav-section">
           <span class="nav-section-label">Admin</span>
-          <a href="{% url 'students:faculty_list' %}" class="nav-item {% block nav_faculty %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_faculty %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M2 14c0-2.8 2.2-5 5-5h2c2.8 0 5 2.2 5 5"/><path d="M11 7l2 2 3-3"/></svg>
             Faculty
           </a>
-          <a href="{% url 'fees:list' %}" class="nav-item {% block nav_fees %}{% endblock %}">
+          <a href="#" class="nav-item {% block nav_fees %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12V6l6-4 6 4v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6 13V9h4v4"/></svg>
             Fee Management
           </a>
@@ -92,10 +92,10 @@
           <div class="user-avatar">
             {{ request.user.get_initials }}
           </div>
-          <div class="user-info">
+          <a href="{% url 'accounts:profile' %}" class="user-info" style="text-decoration:none;">
             <span class="user-name">{{ request.user.get_full_name|default:request.user.username }}</span>
-            <span class="user-role">{{ request.user.get_role_display }}</span>
-          </div>
+            <span class="user-role">{{ request.user.get_role_display_label }}</span>
+          </a>
           <a href="{% url 'accounts:logout' %}" class="logout-btn" title="Logout">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3M11 11l3-3-3-3M14 8H6"/></svg>
           </a>
