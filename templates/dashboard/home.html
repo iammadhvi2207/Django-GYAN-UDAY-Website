@@ -146,8 +146,8 @@
           <tr>
             <td>
               <div class="student-cell">
-                <div class="avatar-sm avatar-sm--{{ student.status|lower|slugify }}">{{ student.initials }}</div>
-                <span>{{ student.name }}</span>
+                <div class="avatar-sm avatar-sm--{{ student.att_color }}">{{ student.initials }}</div>
+                <a href="{% url 'students:detail' student.pk %}" style="color:inherit;">{{ student.name }}</a>
               </div>
             </td>
             <td class="text-muted">{{ student.dept }}</td>
@@ -169,8 +169,10 @@
                 <span class="badge badge--green">Active</span>
               {% elif student.status == 'Low Att.' %}
                 <span class="badge badge--amber">Low Att.</span>
-              {% else %}
+              {% elif student.status == 'At Risk' %}
                 <span class="badge badge--red">At Risk</span>
+              {% else %}
+                <span class="badge badge--blue">{{ student.status }}</span>
               {% endif %}
             </td>
           </tr>

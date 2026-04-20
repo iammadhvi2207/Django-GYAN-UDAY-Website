@@ -78,7 +78,7 @@
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M2 14c0-2.8 2.2-5 5-5h2c2.8 0 5 2.2 5 5"/><path d="M11 7l2 2 3-3"/></svg>
             Faculty
           </a>
-          <a href="#" class="nav-item {% block nav_fees %}{% endblock %}">
+          <a href="{% url 'fees:list' %}" class="nav-item {% block nav_fees %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12V6l6-4 6 4v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path d="M6 13V9h4v4"/></svg>
             Fee Management
           </a>
