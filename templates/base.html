@@ -62,11 +62,11 @@
 
         <div class="nav-section">
           <span class="nav-section-label">Academics</span>
-          <a href="#" class="nav-item {% block nav_results %}{% endblock %}">
+          <a href="{% url 'results:list' %}" class="nav-item {% block nav_results %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1L10 6h5l-4 3 2 5L8 11l-5 4 2-5-4-3h5z"/></svg>
             Examinations
           </a>
-          <a href="#" class="nav-item {% block nav_marks %}{% endblock %}">
+          <a href="{% url 'results:marks' %}" class="nav-item {% block nav_marks %}{% endblock %}">
             <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="10" height="14" rx="1.5"/><path d="M6 5h4M6 8h4M6 11h2"/></svg>
             Results
           </a>
